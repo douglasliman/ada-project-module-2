@@ -1,12 +1,3 @@
-document.addEventListener('click', function (event) {
-    const target = event.target;
-
-    const btnUpdate = target.closest('.update');
-    if (btnUpdate) {
-        const taskId = btnUpdate.getAttribute('data-task-id');
-        updateTask(taskId);
-    }
-});
 const btnUpdate = document.querySelector('.update');
 const modal = document.querySelector('.modal');
 const modalInput = document.getElementById('modal-input');
