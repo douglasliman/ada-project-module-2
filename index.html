@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ToDo List</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<div class="menu">
+					<div id="logo">ToDoList</div>
+					<div id="calendar"></div>
+				</div>
+			</nav>
+		</header>
+		<div id="main">
+			<div class="filter">
+				<label for="filterInput" class="sr-only">Filtre as tarefas</label>
+				<input type="text" id="filterInput" placeholder="Digite para filtrar..." />
+			</div>
+
+			<div class="task">
+				<label for="taskInput" class="sr-only"> Crie a tarefa  </label>
+				<input type="text" id="taskInput" placeholder="Adicionar tarefa..." />
+				<button id="addTaskBtn">Adicionar</button>
+			</div>
+
+			<div class="task">
+				<ul id="taskList">
+	
+				</ul>
+			</div>
+			<div class="finihedTask">
+				<h1>Finalizadas</h1>
+				<ul id="finishedList"></ul>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal-content">
+				<header class="modal-title">
+					<h2>Editar Tarefa</h2>
+				</header>
+				<input type="hidden" id="UUID" />
+				<input type="text" id="modal-input" />
+				<footer class="modal-btn-container">
+					<button id="modal-cancel-btn">Cancelar</button>
+					<button id="modal-save-btn">Salvar</button>
+				</footer>
+			</div>
+		</div>
+
+		<script src="./index.js"></script>
+		<script src="modal.js"></script>
+	</body>
+</html>
